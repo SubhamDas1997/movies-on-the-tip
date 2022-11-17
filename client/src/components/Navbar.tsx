@@ -1,9 +1,15 @@
-import { Navbar, Nav, Button, Form, Container } from "react-bootstrap";
+import { Navbar, Nav, Button, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faFilm, faHeart} from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom';
+import Search from "./Search";
 
-const NavMenu = () => {
+interface INavSearch {
+  searchVal?: string,
+  setSearchVal: (searchVal: string) => void
+}
+
+const NavMenu = ({searchVal, setSearchVal}: INavSearch) => {
     return ( 
       <Navbar bg="dark" variant="dark">
         <Container>
@@ -19,19 +25,13 @@ const NavMenu = () => {
             <Nav.Link to="/top-rated-movies" as={NavLink}>Top rated movies</Nav.Link>
           </Nav>
 
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search movie title"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Nav.Link to="/favourite" as={NavLink}>          
-              <Button variant="outline-warning">       
-                <FontAwesomeIcon icon={faHeart} />
-              </Button>
-            </Nav.Link>
-          </Form>
+          <Search searchVal={searchVal} setSearchVal={setSearchVal} />
+
+          <Nav.Link to="/favourite" as={NavLink}>          
+            <Button variant="outline-warning">       
+              <FontAwesomeIcon icon={faHeart} />
+            </Button>
+          </Nav.Link>
         </Container>
       </Navbar>
      );

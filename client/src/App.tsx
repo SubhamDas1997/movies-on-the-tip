@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Route, Switch } from 'react-router-dom';
 import MoviesComingSoon from './components/ComingSoon/MoviesComingSoon';
@@ -11,15 +11,17 @@ import TopRatedMovies from './components/TopMovies/TopRatedMovies';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 
 function App() {
+  const [searchValue, setSearchValue] = useState<string>('');
+
   return (
     <div>
-      <Navbar />
+      <Navbar searchVal={searchValue} setSearchVal={setSearchValue}/>
       <Container className='my-4'>
         <main>
           <Switch>
             <Route path="/home"> <Home /> </Route>
             <Route path="/:movieType/:title"> <MovieDetails /> </Route>
-            <Route path="/movies-in-theaters"> <MoviesInTheaters /> </Route>
+            <Route path="/movies-in-theaters"> <MoviesInTheaters searchVal={searchValue}/> </Route>
             <Route path="/movies-coming"> <MoviesComingSoon /> </Route>
             <Route path="/top-rated-india"> <TopRatedIndianMovies /> </Route>
             <Route path="/top-rated-movies"> <TopRatedMovies /> </Route>

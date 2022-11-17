@@ -1,34 +1,48 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Alert, Col, Row, Spinner } from "react-bootstrap";
 import IMovie from "../../models/IMovie";
-import { getFavourites, getMoviesInTheaters, postNewFavouriteMovie } from "../../services/Movie";
+import { getFavourites, getMoviesInTheaters } from "../../services/Movie";
 import MovieCardItem from "../MovieCardItem";
 
-const MoviesInTheaters = () => {
+interface IMovieSearch {
+    searchVal: string
+}
+
+const MoviesInTheaters = ({searchVal}: IMovieSearch) => {
     const [movies, setMovies] = useState<IMovie[]>([]);
+    const [searchedMovies, setSearchedMovies] = useState<IMovie[]>([]);
     const [favMovies, setFavMovies] = useState<string[]>([]);
     const [error, setError] = useState<Error | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
-    useEffect(() => {
-        const getMoviesInvoker = async() => {
-            try {
-                const data = await getMoviesInTheaters();
-                const favData = await getFavourites();
-                
-                setMovies(data);
-                setFavMovies(favData.map(
-                    movie => movie.title
-                ));
+    const getMoviesInvoker = useCallback(async() => {
+        try {
+            const data = await getMoviesInTheaters();
+            const favData = await getFavourites();
+            
+            setMovies(data);
+            setSearchedMovies(data);
+            setFavMovies(favData.map(
+                movie => movie.title
+            ));
 
-                // console.log(favData)
-            } catch (error) {
-                setError(error as Error);
-            } finally {
-                setLoading(false);
-            }
+            // console.log(favData)
+        } catch (error) {
+            setError(error as Error);
+        } finally {
+            setLoading(false);
         }
+    }, []);
+
+    useEffect(() => {
+        const newMovies = movies.filter(movie => movie.title.includes(searchVal));
+        setSearchedMovies(newMovies);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [searchVal])
+
+    useEffect(() => {
         getMoviesInvoker();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -53,17 +67,21 @@ const MoviesInTheaters = () => {
             }
 
             {
-                movies.length!== 0 && (
-                    <Row xs={1} md={3} xl={5}>
-                        {
-                            movies.map(movie => 
-                                <Col key={movie.id} className="d-flex my-3">
-                                    <MovieCardItem favMovies={favMovies} movie={movie} />
-                                </Col>
-                            )
-                        }
-                    </Row>
+                searchedMovies.length === 0 && !loading && (
+                    <Alert variant="info"><strong>No movies found!</strong></Alert>
                 )
+            }
+
+            {
+                <Row xs={1} md={3} xl={5}>
+                    {
+                        searchedMovies?.map(movie => 
+                            <Col key={movie.id} className="d-flex my-3">
+                                <MovieCardItem favMovies={favMovies} movie={movie} />
+                            </Col>
+                        )
+                    }
+                </Row>
             }
         </div>
      );
