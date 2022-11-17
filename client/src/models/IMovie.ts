@@ -14,4 +14,6 @@ interface IMovie {
     imdbRating: number,
 }
 
+export type IFavouriteMovie = Omit<IMovie, "id">;
+
 export default IMovie;

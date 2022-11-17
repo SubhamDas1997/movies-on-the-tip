@@ -1,36 +1,46 @@
 import { useState, useEffect } from "react";
 import { Alert, Col, Row, Spinner } from "react-bootstrap";
 import IMovie from "../../models/IMovie";
-import { getMoviesInTheaters } from "../../services/Movie";
+import { getFavourites, getMoviesInTheaters, postNewFavouriteMovie } from "../../services/Movie";
 import MovieCardItem from "../MovieCardItem";
 
 const MoviesInTheaters = () => {
     const [movies, setMovies] = useState<IMovie[]>([]);
+    const [favMovies, setFavMovies] = useState<string[]>([]);
     const [error, setError] = useState<Error | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        const getMoviesInTheatersInvoker = async() => {
+        const getMoviesInvoker = async() => {
             try {
                 const data = await getMoviesInTheaters();
+                const favData = await getFavourites();
+                
                 setMovies(data);
+                setFavMovies(favData.map(
+                    movie => movie.title
+                ));
+
+                // console.log(favData)
             } catch (error) {
                 setError(error as Error);
             } finally {
                 setLoading(false);
             }
         }
-        getMoviesInTheatersInvoker();
+        getMoviesInvoker();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return ( 
         <div>
             <h2>Movies in theaters</h2>
             <hr />
+
             {
                 loading && (
                     <Spinner animation="border" role="status">
-                        <span className="visually-hidden">Loading the movies!</span>
+                        <span className="visually-hidden">Loading the expenses!</span>
                     </Spinner>
                 )
             }
@@ -48,7 +58,7 @@ const MoviesInTheaters = () => {
                         {
                             movies.map(movie => 
                                 <Col key={movie.id} className="d-flex my-3">
-                                    <MovieCardItem movie={movie} />
+                                    <MovieCardItem favMovies={favMovies} movie={movie} />
                                 </Col>
                             )
                         }
