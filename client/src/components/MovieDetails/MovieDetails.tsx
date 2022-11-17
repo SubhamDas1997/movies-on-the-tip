@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Alert, Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import IMovie from '../models/IMovie';
-import { getMovieByTitle } from '../services/Movie';
+import IMovie from '../../models/IMovie';
+import { getMovieByTitle } from '../../services/Movie';
 
 interface IRouteParams {
     movieType: string,

@@ -8,7 +8,7 @@ import MoviesInTheaters from './components/InTheaters/MoviesInTheaters';
 import Navbar from './components/Navbar';
 import TopRatedIndianMovies from './components/TopIndian/TopRatedIndianMovies';
 import TopRatedMovies from './components/TopMovies/TopRatedMovies';
-import MovieDetails from './MovieDetails/MovieDetails';
+import MovieDetails from './components/MovieDetails/MovieDetails';
 
 function App() {
   return (
