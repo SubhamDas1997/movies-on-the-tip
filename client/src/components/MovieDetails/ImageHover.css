@@ -1,7 +1,7 @@
 .poster-wrapper {
+    position: relative;
     width: 337px;
     height: 500px;
-    position: relative;
     cursor: pointer;
 }
 
@@ -29,5 +29,16 @@
 }
 
 .poster-wrapper:hover .overlay {
-    clip-path: circle(92% at 50% 50%); 
+    clip-path: circle(69% at 50% 50%); 
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .1);
+}
+
+.modal, .modal-header {
+    background: rgba(0, 0, 0, .1);
 }

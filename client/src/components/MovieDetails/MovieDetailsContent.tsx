@@ -16,7 +16,7 @@ const MovieDetailsContent = ({movie, movieImage}: IMovieDetailsContent) => {
             <Col className="d-flex my-4" style={{alignItems: "flex-start", justifyContent: "center"}}>
                 <Stack gap={3}>
                     <PosterImagePreview movieImage={movieImage} />
-                    <Button variant="warning" style={{width: "81%", borderRadius: "5px", fontWeight: "bold"}} onClick={() => history.goBack()}>Back</Button>
+                    <Button variant="danger" style={{width: "81%", borderRadius: "5px", fontWeight: "bold"}} onClick={() => history.goBack()}>Back</Button>
                 </Stack>
             </Col>
             
