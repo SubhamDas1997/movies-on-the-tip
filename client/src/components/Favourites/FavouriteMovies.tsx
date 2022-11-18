@@ -5,10 +5,11 @@ import { getFavourites } from "../../services/Movie";
 import MovieCardItem from "../MovieCardItem";
 
 interface IMovieSearch {
-    searchVal: string
+    searchVal: string,
+    setSearchVal: (searchVal: string) => void
 }
 
-const FavouriteMovies = ({searchVal}: IMovieSearch) => {
+const FavouriteMovies = ({searchVal, setSearchVal}: IMovieSearch) => {
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [searchedMovies, setSearchedMovies] = useState<IMovie[]>([]);
     const [error, setError] = useState<Error | null>(null);
@@ -26,6 +27,7 @@ const FavouriteMovies = ({searchVal}: IMovieSearch) => {
                 const data = await getFavourites();
                 setMovies(data);
                 setSearchedMovies(data);
+                setSearchVal('');
             } catch (error) {
                 setError(error as Error);
             } finally {
@@ -33,6 +35,7 @@ const FavouriteMovies = ({searchVal}: IMovieSearch) => {
             }
         }
         getFavouritesInvoker();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return ( 

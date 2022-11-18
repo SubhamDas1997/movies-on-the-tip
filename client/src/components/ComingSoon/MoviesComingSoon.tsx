@@ -5,10 +5,11 @@ import { getFavourites, getMoviesComingSoon } from "../../services/Movie";
 import MovieCardItem from "../MovieCardItem";
 
 interface IMovieSearch {
-    searchVal: string
+    searchVal: string,
+    setSearchVal: (searchVal: string) => void
 }
 
-const MoviesComingSoon = ({searchVal}: IMovieSearch) => {
+const MoviesComingSoon = ({searchVal, setSearchVal}: IMovieSearch) => {
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [searchedMovies, setSearchedMovies] = useState<IMovie[]>([]);
     const [favMovies, setFavMovies] = useState<string[]>([]);
@@ -32,8 +33,7 @@ const MoviesComingSoon = ({searchVal}: IMovieSearch) => {
                 setFavMovies(favData.map(
                     movie => movie.title
                 ));
-    
-                // console.log(favData)
+                setSearchVal('');
             } catch (error) {
                 setError(error as Error);
             } finally {
@@ -41,6 +41,7 @@ const MoviesComingSoon = ({searchVal}: IMovieSearch) => {
             }
         }
         getMoviesInvoker();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return ( 

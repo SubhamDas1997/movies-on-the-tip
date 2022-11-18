@@ -21,11 +21,11 @@ function App() {
           <Switch>
             <Route path="/home"> <Home /> </Route>
             <Route path="/:movieType/:title"> <MovieDetails /> </Route>
-            <Route path="/movies-in-theaters"> <MoviesInTheaters searchVal={searchValue} /> </Route>
-            <Route path="/movies-coming"> <MoviesComingSoon searchVal={searchValue} /> </Route>
-            <Route path="/top-rated-india"> <TopRatedIndianMovies searchVal={searchValue} /> </Route>
-            <Route path="/top-rated-movies"> <TopRatedMovies searchVal={searchValue} /> </Route>
-            <Route path="/favourite"> <FavouriteMovies searchVal={searchValue} /> </Route>
+            <Route path="/movies-in-theaters"> <MoviesInTheaters searchVal={searchValue} setSearchVal={setSearchValue} /> </Route>
+            <Route path="/movies-coming"> <MoviesComingSoon searchVal={searchValue} setSearchVal={setSearchValue} /> </Route>
+            <Route path="/top-rated-india"> <TopRatedIndianMovies searchVal={searchValue} setSearchVal={setSearchValue} /> </Route>
+            <Route path="/top-rated-movies"> <TopRatedMovies searchVal={searchValue} setSearchVal={setSearchValue} /> </Route>
+            <Route path="/favourite"> <FavouriteMovies searchVal={searchValue} setSearchVal={setSearchValue} /> </Route>
             <Route path="/"> <Home /> </Route>
           </Switch>
         </main>
