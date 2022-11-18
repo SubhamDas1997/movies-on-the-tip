@@ -3,7 +3,6 @@ import { Alert, Col, Row, Spinner } from "react-bootstrap";
 import IMovie from "../../models/IMovie";
 import { getFavourites, getMoviesTopRated } from "../../services/Movie";
 import MovieCardItem from "../MovieCardItem";
-import MovieDetailsContent from "../MovieDetails/MovieDetailsContent";
 
 interface IMovieSearch {
     searchVal: string,
