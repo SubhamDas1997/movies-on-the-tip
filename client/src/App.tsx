@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <Navbar searchVal={searchValue} setSearchVal={setSearchValue} disableSearch={isSearchDisabled} />
-      <Container className='my-4'>
+      <Container style={{marginTop: "80px", marginBottom: "25px"}}>
         <main>
           <Switch>
             <Route path="/home"> <Home setDisableSearch={setIsSearchDisabled} /> </Route>

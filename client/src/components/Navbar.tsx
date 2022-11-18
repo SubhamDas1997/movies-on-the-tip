@@ -12,7 +12,7 @@ interface INavSearch {
 
 const NavMenu = ({searchVal, setSearchVal, disableSearch}: INavSearch) => {
     return ( 
-      <Navbar bg="dark" variant="dark">
+      <Navbar fixed="top" bg="dark" variant="dark" style={{display: "block"}}>
         <Container>
           <Navbar.Brand to="/home" as={NavLink} style={{color: '#FFC107'}}>
             <FontAwesomeIcon icon={faFilm} style={{marginRight: '5px'}}/> 
