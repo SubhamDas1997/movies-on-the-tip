@@ -1,0 +1,33 @@
+.poster-wrapper {
+    width: 337px;
+    height: 500px;
+    position: relative;
+    cursor: pointer;
+}
+
+#poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: fill;
+}
+
+.overlay {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    font-size: 1.5rem;
+    color: white;
+    clip-path: circle(0% at 50% 50%);
+    transition: all 0.3s;
+}
+
+.poster-wrapper:hover .overlay {
+    clip-path: circle(92% at 50% 50%); 
+}

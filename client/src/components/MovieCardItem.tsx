@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card } from "react-bootstrap";
 import IMovie, { IFavouriteMovie } from "../models/IMovie";
 import { deleteFavouriteMovie, postNewFavouriteMovie } from "../services/Movie";
-import { faHeart, faCircleInfo, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faCircleInfo, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -51,7 +51,7 @@ const MoviesInTheatersItem = ({ favMovies, movie }: IMovieCardModel) => {
             averageRating: movie.averageRating,
             storyline: movie.storyline,
             actors: movie.actors,
-            imdbRating: movie.imdbRating,
+            imdbRating: movie.imdbRating
         }
 
         if (movieType === "/favourite") {

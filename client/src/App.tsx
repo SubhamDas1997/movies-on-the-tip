@@ -21,7 +21,7 @@ function App() {
         <main>
           <Switch>
             <Route path="/home"> <Home setDisableSearch={setIsSearchDisabled} /> </Route>
-            <Route path="/:movieType/:title"> <MovieDetails /> </Route>
+            <Route path="/:movieType/:title"> <MovieDetails setDisableSearch={setIsSearchDisabled} /> </Route>
             <Route path="/movies-in-theaters"> <MoviesInTheaters searchVal={searchValue} setSearchVal={setSearchValue} setDisableSearch={setIsSearchDisabled} /> </Route>
             <Route path="/movies-coming"> <MoviesComingSoon searchVal={searchValue} setSearchVal={setSearchValue} setDisableSearch={setIsSearchDisabled} /> </Route>
             <Route path="/top-rated-india"> <TopRatedIndianMovies searchVal={searchValue} setSearchVal={setSearchValue} setDisableSearch={setIsSearchDisabled} /> </Route>
