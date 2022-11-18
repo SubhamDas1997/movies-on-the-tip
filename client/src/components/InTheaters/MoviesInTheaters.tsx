@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Alert, Col, Row, Spinner } from "react-bootstrap";
 import IMovie from "../../models/IMovie";
 import { getFavourites, getMoviesInTheaters } from "../../services/Movie";
@@ -15,35 +15,32 @@ const MoviesInTheaters = ({searchVal}: IMovieSearch) => {
     const [error, setError] = useState<Error | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
-    const getMoviesInvoker = useCallback(async() => {
-        try {
-            const data = await getMoviesInTheaters();
-            const favData = await getFavourites();
-            
-            setMovies(data);
-            setSearchedMovies(data);
-            setFavMovies(favData.map(
-                movie => movie.title
-            ));
-
-            // console.log(favData)
-        } catch (error) {
-            setError(error as Error);
-        } finally {
-            setLoading(false);
-        }
-    }, []);
-
     useEffect(() => {
-        const newMovies = movies.filter(movie => movie.title.includes(searchVal));
+        const newMovies = movies.filter(movie => movie.title.toLowerCase().split(' ').join('').includes(searchVal.toLowerCase().split(' ').join('')));
         setSearchedMovies(newMovies);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchVal])
 
     useEffect(() => {
+        const getMoviesInvoker = async() => {
+            try {
+                const data = await getMoviesInTheaters();
+                const favData = await getFavourites();
+                
+                setMovies(data);
+                setSearchedMovies(data);
+                setFavMovies(favData.map(
+                    movie => movie.title
+                ));
+    
+                // console.log(favData)
+            } catch (error) {
+                setError(error as Error);
+            } finally {
+                setLoading(false);
+            }
+        }
         getMoviesInvoker();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return ( 

@@ -12,7 +12,7 @@ import MovieDetails from './components/MovieDetails/MovieDetails';
 
 function App() {
   const [searchValue, setSearchValue] = useState<string>('');
-
+  
   return (
     <div>
       <Navbar searchVal={searchValue} setSearchVal={setSearchValue}/>
@@ -21,11 +21,11 @@ function App() {
           <Switch>
             <Route path="/home"> <Home /> </Route>
             <Route path="/:movieType/:title"> <MovieDetails /> </Route>
-            <Route path="/movies-in-theaters"> <MoviesInTheaters searchVal={searchValue}/> </Route>
-            <Route path="/movies-coming"> <MoviesComingSoon /> </Route>
-            <Route path="/top-rated-india"> <TopRatedIndianMovies /> </Route>
-            <Route path="/top-rated-movies"> <TopRatedMovies /> </Route>
-            <Route path="/favourite"> <FavouriteMovies /> </Route>
+            <Route path="/movies-in-theaters"> <MoviesInTheaters searchVal={searchValue} /> </Route>
+            <Route path="/movies-coming"> <MoviesComingSoon searchVal={searchValue} /> </Route>
+            <Route path="/top-rated-india"> <TopRatedIndianMovies searchVal={searchValue} /> </Route>
+            <Route path="/top-rated-movies"> <TopRatedMovies searchVal={searchValue} /> </Route>
+            <Route path="/favourite"> <FavouriteMovies searchVal={searchValue} /> </Route>
             <Route path="/"> <Home /> </Route>
           </Switch>
         </main>
