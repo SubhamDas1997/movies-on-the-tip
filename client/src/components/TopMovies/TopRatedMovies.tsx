@@ -3,6 +3,7 @@ import { Alert, Col, Row, Spinner } from "react-bootstrap";
 import IMovie from "../../models/IMovie";
 import { getFavourites, getMoviesTopRated } from "../../services/Movie";
 import MovieCardItem from "../MovieCardItem";
+import MovieDetailsContent from "../MovieDetails/MovieDetailsContent";
 
 interface IMovieSearch {
     searchVal: string,
@@ -75,8 +76,8 @@ const TopRatedMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovieSearc
             {
                 <Row xs={1} md={3} xl={5}>
                     {
-                        searchedMovies?.map(movie => 
-                            <Col key={movie.id} className="d-flex my-3">
+                        searchedMovies?.map((movie, movieId) => 
+                            <Col key={movieId} className="d-flex my-3">
                                 <MovieCardItem favMovies={favMovies} movie={movie} />
                             </Col>
                         )

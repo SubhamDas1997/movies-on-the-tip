@@ -75,8 +75,8 @@ const TopRatedIndianMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovi
             {
                 <Row xs={1} md={3} xl={5}>
                     {
-                        searchedMovies?.map(movie => 
-                            <Col key={movie.id} className="d-flex my-3">
+                        searchedMovies?.map((movie, movieId) => 
+                            <Col key={movieId} className="d-flex my-3">
                                 <MovieCardItem favMovies={favMovies} movie={movie} />
                             </Col>
                         )
