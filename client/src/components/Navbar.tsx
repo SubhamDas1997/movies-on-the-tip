@@ -6,10 +6,11 @@ import Search from "./Search";
 
 interface INavSearch {
   searchVal?: string,
-  setSearchVal: (searchVal: string) => void
+  setSearchVal: (searchVal: string) => void,
+  disableSearch: boolean
 }
 
-const NavMenu = ({searchVal, setSearchVal}: INavSearch) => {
+const NavMenu = ({searchVal, setSearchVal, disableSearch}: INavSearch) => {
     return ( 
       <Navbar bg="dark" variant="dark">
         <Container>
@@ -25,7 +26,7 @@ const NavMenu = ({searchVal, setSearchVal}: INavSearch) => {
             <Nav.Link to="/top-rated-movies" as={NavLink}>Top rated movies</Nav.Link>
           </Nav>
 
-          <Search searchVal={searchVal} setSearchVal={setSearchVal} />
+          <Search searchVal={searchVal} setSearchVal={setSearchVal} disableSearch={disableSearch} />
 
           <Nav.Link to="/favourite" as={NavLink}>          
             <Button variant="outline-warning">       

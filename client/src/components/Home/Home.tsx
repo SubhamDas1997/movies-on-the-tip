@@ -1,4 +1,15 @@
-const Home = () => {
+import { useEffect } from "react";
+
+interface INavSearch {
+    setDisableSearch: (disableSearch: boolean) => void
+}
+
+const Home = ({setDisableSearch}: INavSearch) => {
+    useEffect(() => {
+        setDisableSearch(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return(
         <>
             <h2>

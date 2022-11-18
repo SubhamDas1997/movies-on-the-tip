@@ -6,10 +6,11 @@ import MovieCardItem from "../MovieCardItem";
 
 interface IMovieSearch {
     searchVal: string,
-    setSearchVal: (searchVal: string) => void
+    setSearchVal: (searchVal: string) => void,
+    setDisableSearch: (disableSearch: boolean) => void
 }
 
-const FavouriteMovies = ({searchVal, setSearchVal}: IMovieSearch) => {
+const FavouriteMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovieSearch) => {
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [searchedMovies, setSearchedMovies] = useState<IMovie[]>([]);
     const [error, setError] = useState<Error | null>(null);
@@ -27,6 +28,7 @@ const FavouriteMovies = ({searchVal, setSearchVal}: IMovieSearch) => {
                 const data = await getFavourites();
                 setMovies(data);
                 setSearchedMovies(data);
+                setDisableSearch(false);
                 setSearchVal('');
             } catch (error) {
                 setError(error as Error);
