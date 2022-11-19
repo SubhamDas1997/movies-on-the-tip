@@ -1,0 +1,22 @@
+.search-field {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    margin: 8px 12px 8px 0;
+    padding: 0 0 0 15px;
+    border-radius: 7px;
+    transition: all 0.3s;
+}
+
+.search-bar:focus {
+    outline-color: #0dcaf0;
+    box-shadow: 0 0 7px #0dcaf0;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 480px) {
+}

@@ -5,7 +5,7 @@ import MoviesComingSoon from './components/ComingSoon/MoviesComingSoon';
 import FavouriteMovies from './components/Favourites/FavouriteMovies';
 import Home from './components/Home/Home';
 import MoviesInTheaters from './components/InTheaters/MoviesInTheaters';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import TopRatedIndianMovies from './components/TopIndian/TopRatedIndianMovies';
 import TopRatedMovies from './components/TopMovies/TopRatedMovies';
 import MovieDetails from './components/MovieDetails/MovieDetails';
@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <Navbar searchVal={searchValue} setSearchVal={setSearchValue} disableSearch={isSearchDisabled} />
-      <Container style={{marginTop: "80px", marginBottom: "25px"}}>
+      <Container style={{marginTop: "90px", marginBottom: "20px"}}>
         <main>
           <Switch>
             <Route path="/home"> <Home setDisableSearch={setIsSearchDisabled} /> </Route>

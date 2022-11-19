@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card } from "react-bootstrap";
-import IMovie, { IFavouriteMovie } from "../models/IMovie";
-import { deleteFavouriteMovie, postNewFavouriteMovie } from "../services/Movie";
+import IMovie, { IFavouriteMovie } from "../../models/IMovie";
+import { deleteFavouriteMovie, postNewFavouriteMovie } from "../../services/Movie";
 import { faHeart, faCircleInfo, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -64,8 +64,8 @@ const MoviesInTheatersItem = ({ favMovies, movie }: IMovieCardModel) => {
     }
 
     return ( 
-        <Card>
-            <Card.Img variant="top" src={baseURL + movie.poster} alt="Poster" style={{height: '350px', width: '238px'}}/>
+        <Card style={{width: '238px'}}>
+            <Card.Img variant="top" src={baseURL + movie.poster} alt="Poster" style={{height: '350px'}} />
             <Card.Body>
                 <Card.Title className="text-truncate" style={{paddingBottom: '8px'}}>{movie.title}</Card.Title>
                 <div className="d-flex" style={{gap: '15px'}}>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Alert, Col, Row, Spinner } from "react-bootstrap";
 import IMovie from "../../models/IMovie";
 import { getFavourites } from "../../services/Movie";
-import MovieCardItem from "../MovieCardItem";
+import MovieCardItem from "../MovieCardItem/MovieCardItem";
 
 interface IMovieSearch {
     searchVal: string,
