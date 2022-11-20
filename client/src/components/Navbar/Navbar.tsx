@@ -49,7 +49,7 @@ const NavMenu = ({searchVal, setSearchVal, disableSearch}: INavSearch) => {
 
   const handleBrandLogoClick = () => {
     favBtnInactive();
-    handleHamburgerClick();
+    if (isNavExpanded === true) handleHamburgerClick();
   }
 
   useEffect(() => {
