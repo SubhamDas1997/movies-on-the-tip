@@ -20,14 +20,13 @@
     display: none;
 }
 
-
 @media (max-width: 1100px) {
     .nav-container .menu-fav {
         display: block;
         color: #FFC107
     }
 
-    .nav-container .btn-fav {
+    .nav-container .fav-btn-div {
         display: none;
     }
 
