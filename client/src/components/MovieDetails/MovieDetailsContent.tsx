@@ -13,87 +13,87 @@ const MovieDetailsContent = ({movie, movieImage}: IMovieDetailsContent) => {
 
     return ( 
         <Row className="my-4">
-            <Col className="d-flex my-4" style={{alignItems: "flex-start", justifyContent: "center"}}>
-                <Stack gap={3}>
+            <Col className="my-4" style={{alignItems: "flex-start", justifyContent: "center"}}>
+                <Stack gap={3} className="poster-stack">
                     <PosterImagePreview movieImage={movieImage} />
-                    <Button variant="danger" style={{width: "81%", borderRadius: "5px", fontWeight: "bold"}} onClick={() => history.goBack()}>Back</Button>
+                    <Button className="back-btn" variant="danger" onClick={() => history.goBack()}>Back</Button>
                 </Stack>
             </Col>
             
-            <Col xs={8} className="d-flex my-3">
+            <Col xs={8} className="my-3">
                 <Stack gap={3}>
-                    <h1>{movie?.title.toUpperCase()} ({movie?.year})</h1>
+                    <h1 className="movie-title">{movie?.title.toUpperCase()} ({movie?.year})</h1>
 
                     <Stack gap={1}>
                         <Row>
                             <Col>
-                                <h5>Storyline</h5>
+                                <h5 className="movie-details-heading">Storyline</h5>
                             </Col>
-                            <Col xs={9}>
-                                <p>{movie?.storyline}</p>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col>
-                                <h5>imdb Rating</h5>
-                            </Col>
-                            <Col xs={9}>
-                                <p>{movie?.imdbRating}</p>
+                            <Col xl={9}>
+                                <p className="movie-details-value">{movie?.storyline}</p>
                             </Col>
                         </Row>
 
                         <Row>
                             <Col>
-                                <h5>Content Rating</h5>
+                                <h5 className="movie-details-heading">imdb Rating</h5>
                             </Col>
-                            <Col xs={9}>
-                                <p>{movie?.contentRating}</p>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col>
-                                <h5>Average Rating</h5>
-                            </Col>
-                            <Col xs={9}>
-                                <p>{movie?.averageRating}</p>
+                            <Col xl={9}>
+                                <p className="movie-details-value">{movie?.imdbRating}</p>
                             </Col>
                         </Row>
 
                         <Row>
                             <Col>
-                                <h5>Duration</h5>
+                                <h5 className="movie-details-heading">Content Rating</h5>
                             </Col>
-                            <Col xs={9}>
-                                <p>{movie?.duration}</p>
+                            <Col xl={9}>
+                                <p className="movie-details-value">{movie?.contentRating}</p>
                             </Col>
                         </Row>
 
                         <Row>
                             <Col>
-                                <h5>Genres</h5>
+                                <h5 className="movie-details-heading">Average Rating</h5>
                             </Col>
-                            <Col xs={9}>
-                                <p>{movie?.genres.join(' - ')}</p>
+                            <Col xl={9}>
+                                <p className="movie-details-value">{movie?.averageRating}</p>
+                            </Col>
+                        </Row>
+
+                        <Row>
+                            <Col>
+                                <h5 className="movie-details-heading">Duration</h5>
+                            </Col>
+                            <Col xl={9}>
+                                <p className="movie-details-value">{movie?.duration}</p>
+                            </Col>
+                        </Row>
+
+                        <Row>
+                            <Col>
+                                <h5 className="movie-details-heading">Genres</h5>
+                            </Col>
+                            <Col xl={9}>
+                                <p className="movie-details-value">{movie?.genres.join(' - ')}</p>
                             </Col>
                         </Row>
                         
                         <Row>
                             <Col>
-                                <h5>Actors</h5>
+                                <h5 className="movie-details-heading">Actors</h5>
                             </Col>
-                            <Col xs={9}>
-                                <p>{movie?.actors.join(' - ')}</p>
+                            <Col xl={9}>
+                                <p className="movie-details-value">{movie?.actors.join(' - ')}</p>
                             </Col>
                         </Row>
 
                         <Row>
                             <Col>
-                                <h5>Release Date</h5>
+                                <h5 className="movie-details-heading">Release Date</h5>
                             </Col>
-                            <Col xs={9}>
-                                <p>{movie?.releaseDate}</p>
+                            <Col xl={9}>
+                                <p className="movie-details-value">{movie?.releaseDate}</p>
                             </Col>
                         </Row>
                     </Stack>

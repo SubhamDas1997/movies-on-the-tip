@@ -41,10 +41,15 @@ const NavMenu = ({searchVal, setSearchVal, disableSearch}: INavSearch) => {
   }
 
   const handleHamburgerClick = () => {
-    if (screenWidth >= 1100) return setIsNavExpanded(false);
+    if (screenWidth >= 1200 ) return setIsNavExpanded(false);
     if (isNavExpanded === false) return setIsNavExpanded(true);
     
     setIsNavExpanded(false);
+  }
+
+  const handleBrandLogoClick = () => {
+    favBtnInactive();
+    handleHamburgerClick();
   }
 
   useEffect(() => {
@@ -60,7 +65,7 @@ const NavMenu = ({searchVal, setSearchVal, disableSearch}: INavSearch) => {
   return ( 
     <Navbar collapseOnSelect expand="xl" fixed="top" bg="dark" variant="dark" expanded={isNavExpanded}>
       <Container className="nav-container">
-        <Navbar.Brand className="nav-logo" to="/home" as={NavLink} style={{color: '#FFC107'}} onClick={favBtnInactive}>
+        <Navbar.Brand className="nav-logo" to="/home" as={NavLink} style={{color: '#FFC107'}} onClick={handleBrandLogoClick}>
           <FontAwesomeIcon icon={faFilm} style={{marginRight: '5px'}}/> 
           MOTT
         </Navbar.Brand>

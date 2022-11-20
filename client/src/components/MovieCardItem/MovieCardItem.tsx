@@ -64,8 +64,8 @@ const MoviesInTheatersItem = ({ favMovies, movie }: IMovieCardModel) => {
     }
 
     return ( 
-        <Card style={{width: '238px'}}>
-            <Card.Img variant="top" src={baseURL + movie.poster} alt="Poster" style={{height: '350px'}} />
+        <Card className="card">
+            <Card.Img variant="top" src={baseURL + movie.poster} alt="Poster" className="card-image" />
             <Card.Body>
                 <Card.Title className="text-truncate" style={{paddingBottom: '8px'}}>{movie.title}</Card.Title>
                 <div className="d-flex" style={{gap: '15px'}}>

@@ -3,9 +3,37 @@
     justify-content: center;
 }
 
+.main-container {
+    margin: 90px 0 20px 0;
+}
+
+.card {
+    width: 238px;
+}
+
+.card-image {
+    height: 350px;
+}
+
 @media (max-width: 767px) {
     .page-header {
         display: flex;
         justify-content: center;
+    }
+
+    .main-container {
+        margin: 70px 0 0 0;
+    }
+
+    .card-image {
+        height: 300px;
+    }
+
+    .home-content {
+        font-size: 14px;
+    }
+
+    .ol {
+        padding-left: 1em;
     }
 }

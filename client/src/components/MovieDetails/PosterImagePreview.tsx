@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from '@fortawesome/free-solid-svg-icons';
-import './ImageHover.css'
+import './MovieDetails.css';
 
 interface IPosterImage {
     movieImage: string
