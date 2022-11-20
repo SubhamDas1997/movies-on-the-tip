@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar';
 import TopRatedIndianMovies from './components/TopIndian/TopRatedIndianMovies';
 import TopRatedMovies from './components/TopMovies/TopRatedMovies';
 import MovieDetails from './components/MovieDetails/MovieDetails';
+import './components/MainPage.css';
 
 function App() {
   const [searchValue, setSearchValue] = useState<string>('');

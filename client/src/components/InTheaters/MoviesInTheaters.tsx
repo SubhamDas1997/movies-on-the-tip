@@ -48,7 +48,7 @@ const MoviesInTheaters = ({searchVal, setSearchVal, setDisableSearch}: IMovieSea
 
     return ( 
         <div>
-            <h2>Movies in theaters</h2>
+            <h2 className="page-header">Movies in theaters</h2>
             <hr />
 
             {

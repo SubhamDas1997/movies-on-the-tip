@@ -19,7 +19,7 @@ const NavMenu = ({searchVal, setSearchVal, disableSearch}: INavSearch) => {
   const [isFavBtnActive, setIsFavBtnActive] = useState<string>(movieType === "/favourite" ? 'active' : '');
   const [isSearchBtnActive, setIsSearchBtnActive] = useState<string>('search-btn');
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
-  const [ExtraSearchOpen, setExtraSearchOpen] = useState<string>(screenWidth <= 1100 ? 'flex' : 'none');
+  const [ExtraSearchOpen, setExtraSearchOpen] = useState<string>(screenWidth <= 1200 ? 'flex' : 'none');
   const [isNavExpanded, setIsNavExpanded] = useState<boolean>(false);
   
   const handleSeachBtnClick = () => {
@@ -50,7 +50,7 @@ const NavMenu = ({searchVal, setSearchVal, disableSearch}: INavSearch) => {
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
-      setExtraSearchOpen(screenWidth <= 1100 ? 'flex' : 'none');
+      setExtraSearchOpen(screenWidth <= 1200 ? 'flex' : 'none');
     };
 
     window.addEventListener("resize", handleResize);

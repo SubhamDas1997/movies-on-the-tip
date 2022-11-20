@@ -42,7 +42,7 @@ const FavouriteMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovieSear
 
     return ( 
         <div>
-            <h2>Your favourite movies</h2>
+            <h2 className="page-header">Your favourite movies</h2>
             <hr />
 
             {

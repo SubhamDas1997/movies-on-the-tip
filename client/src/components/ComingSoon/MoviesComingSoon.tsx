@@ -48,7 +48,7 @@ const MoviesComingSoon = ({searchVal, setSearchVal, setDisableSearch}: IMovieSea
 
     return ( 
         <div>
-            <h2>Movies coming soon</h2>
+            <h2 className="page-header">Movies coming soon</h2>
             <hr />
 
             {

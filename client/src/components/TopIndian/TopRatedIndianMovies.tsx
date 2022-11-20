@@ -48,7 +48,7 @@ const TopRatedIndianMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovi
 
     return ( 
         <div>
-            <h2>Top rated Indian movies</h2>
+            <h2 className="page-header">Top rated Indian movies</h2>
             <hr />
 
             {

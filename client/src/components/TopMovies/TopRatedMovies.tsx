@@ -48,7 +48,7 @@ const TopRatedMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovieSearc
 
     return ( 
         <div>
-            <h2>Top rated movies</h2>
+            <h2 className="page-header">Top rated movies</h2>
             <hr />
 
             {
