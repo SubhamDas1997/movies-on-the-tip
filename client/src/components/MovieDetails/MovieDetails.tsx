@@ -33,6 +33,8 @@ const MovieDetails = ({setDisableSearch}: INavSearch) => {
                 setMovie(movieFromArray);
                 setMovieImage(`${baseURL}${movieFromArray.poster}`);
                 setDisableSearch(true);
+                
+                window.scrollTo(0, 0);
             } catch (error) {
                 setError(error as Error);
             } finally {
