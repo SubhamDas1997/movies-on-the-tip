@@ -67,7 +67,7 @@ const TopRatedIndianMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovi
             }
 
             {
-                searchedMovies.length === 0 && !loading && (
+                searchedMovies.length === 0 && !loading && !error && (
                     <Alert variant="info"><strong>No movies found!</strong></Alert>
                 )
             }
