@@ -13,7 +13,7 @@ interface IMovieSearch {
 const MoviesComingSoon = ({searchVal, setSearchVal, setDisableSearch}: IMovieSearch) => {
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [searchedMovies, setSearchedMovies] = useState<IMovie[]>([]);
-    const [favMovies, setFavMovies] = useState<string[]>([]);
+    const [favMovieTitles, setFavMovieTitles] = useState<string[]>([]);
     const [error, setError] = useState<Error | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
@@ -31,7 +31,7 @@ const MoviesComingSoon = ({searchVal, setSearchVal, setDisableSearch}: IMovieSea
                 
                 setMovies(data);
                 setSearchedMovies(data);
-                setFavMovies(favData.map(
+                setFavMovieTitles(favData.map(
                     movie => movie.title
                 ));
                 setDisableSearch(false);
@@ -77,7 +77,7 @@ const MoviesComingSoon = ({searchVal, setSearchVal, setDisableSearch}: IMovieSea
                     {
                         searchedMovies?.map(movie => 
                             <Col key={movie.id} className="d-flex my-3">
-                                <MovieCardItem favMovies={favMovies} movie={movie} />
+                                <MovieCardItem favMovieTitles={favMovieTitles} movie={movie} />
                             </Col>
                         )
                     }

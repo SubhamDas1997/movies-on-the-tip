@@ -7,20 +7,20 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 interface IMovieCardModel {
-    favMovies?: string[],
+    favMovieTitles?: string[],
     movie: IMovie
 }
 
 const baseURL = process.env.REACT_APP_BASE_URL;
 
-const MoviesInTheatersItem = ({ favMovies, movie }: IMovieCardModel) => {
+const MoviesInTheatersItem = ({ favMovieTitles, movie }: IMovieCardModel) => {
     const movieType = window.location.pathname;
 
     let variantText: string = 'outline-warning';
     let clickable: boolean = false;
     let icon: any = <FontAwesomeIcon icon={faHeart} />;
 
-    if(favMovies?.includes(movie.title)){
+    if(favMovieTitles?.includes(movie.title)){
         icon = <span style={{fontWeight: "bold"}}>Favourited!</span>;
         variantText = 'secondary';
         clickable = true;

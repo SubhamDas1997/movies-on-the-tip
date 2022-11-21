@@ -13,7 +13,7 @@ interface IMovieSearch {
 const TopRatedIndianMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovieSearch) => {
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [searchedMovies, setSearchedMovies] = useState<IMovie[]>([]);
-    const [favMovies, setFavMovies] = useState<string[]>([]);
+    const [favMovieTitles, setFavMovieTitles] = useState<string[]>([]);
     const [error, setError] = useState<Error | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
@@ -31,7 +31,7 @@ const TopRatedIndianMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovi
                 
                 setMovies(data);
                 setSearchedMovies(data);
-                setFavMovies(favData.map(
+                setFavMovieTitles(favData.map(
                     movie => movie.title
                 ));
                 setDisableSearch(false);
@@ -77,7 +77,7 @@ const TopRatedIndianMovies = ({searchVal, setSearchVal, setDisableSearch}: IMovi
                     {
                         searchedMovies?.map((movie, movieId) => 
                             <Col key={movieId} className="d-flex my-3">
-                                <MovieCardItem favMovies={favMovies} movie={movie} />
+                                <MovieCardItem favMovieTitles={favMovieTitles} movie={movie} />
                             </Col>
                         )
                     }
