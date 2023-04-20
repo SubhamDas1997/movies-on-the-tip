@@ -47,5 +47,15 @@ Contains all the public pages of the website which consist of one page for every
 A card template to place title, poster of each movie and two buttons - view movie details and add/remove from favourites list.
 
 # Tech Stack
+## Frontend:
+1. React - v18.2.0
+1. Typescript - v4.8.4
+1. Bootstrap - v5.2.2
+1. React-bootstrap - v2.6.0
+1. React Router - v5.3.4
+1. Axios - v1.1.3
+
+##Backend:
+1. JSON Server - v0.17.1
 
 # Setup
