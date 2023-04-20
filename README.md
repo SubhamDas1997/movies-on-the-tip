@@ -22,7 +22,6 @@ This frontend application is responsibile for taking care of the following user 
     - Button is diabled if the movie is already present in favourites list
 <br><br>
 1. Remove a favourite movie from the favourites list
-1. All pages are responsive to different screen sizes
 
 # Modules
 1. Home
