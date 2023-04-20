@@ -3,7 +3,7 @@
 ### 🌐 [Site]
 ### 🔴 [Demo](https://www.youtube.com/watch?v=TkSwuNl_HEA&ab_channel=SubhamDas)
 
-## Features
+# Features
 This frontend application is responsibile for taking care of the following user activities on the portal:
 1. View all the movie titles with thier posters under a different movie types which include -
     - Movies in theaters
@@ -24,7 +24,7 @@ This frontend application is responsibile for taking care of the following user 
 1. Remove a favourite movie from the favourites list
 1. All pages are responsive to different screen sizes
 
-## Modules
+# Modules
 1. Home
     - Landing Page
     - Movies in theatre
@@ -41,12 +41,12 @@ This frontend application is responsibile for taking care of the following user 
     - Favourtie button
 
 ***
-### Home
+## Home
 Contains all the public pages of the website which consist of one page for every movie type, favourties list and details of each movie.
 
-### Movie Card Item
+## Movie Card Item
 A card template to place title, poster of each movie along with two buttons - view movie details and add/remove from favourites list.
 
-## Tech Stack
+# Tech Stack
 
-## Setup
+# Setup
