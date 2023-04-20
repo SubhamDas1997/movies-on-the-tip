@@ -42,7 +42,7 @@ This frontend application is responsibile for taking care of the following user 
 
 ***
 ### Home
-Contains all the public pages of the website which consist of one page for every movie type, favourties list and details of each movie.<br>
+Contains all the public pages of the website which consist of one page for every movie type, favourties list and details of each movie.
 
 ### Movie Card Item
 A card template to place title, poster of each movie along with two buttons - view movie details and add/remove from favourites list.
