@@ -24,7 +24,6 @@ This frontend application is responsibile for taking care of the following user 
 1. Remove a favourite movie from the favourites list
 1. All pages are responsive to different screen sizes
 ## Modules
-### Table of Contents
 1. Home
     - Landing Page
     - Movies in theatre
