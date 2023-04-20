@@ -5,7 +5,7 @@
 
 ## Features
 This frontend application is responsibile for taking care of the following user activities on the portal:
-  1. View all the movie titles with thier posters under a different movie types which include - <br>
+1. View all the movie titles with thier posters under a different movie types which include -
     - Movies in theaters
     - Coming soon
     - Top rated Indian
