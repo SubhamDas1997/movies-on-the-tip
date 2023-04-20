@@ -40,7 +40,6 @@ This frontend application is responsibile for taking care of the following user 
     - Info button
     - Favourtie button
 
-***
 ## Home
 Contains all the public pages of the website which consist of one page for every movie type, favourties list and details of each movie.
 
