@@ -23,6 +23,7 @@ This frontend application is responsibile for taking care of the following user 
 <br><br>
 1. Remove a favourite movie from the favourites list
 1. All pages are responsive to different screen sizes
+
 ## Modules
 1. Home
     - Landing Page
@@ -31,17 +32,21 @@ This frontend application is responsibile for taking care of the following user 
     - Top rated Indian
     - Top rated movies
     - Favourties
+    - Movie Details
 <br><br>
 1. Movie Card Item
     - Poster
     - Movie Title
     - Info button
     - Favourtie button
-<br><br>
-3. Movie Details
-    - Details
-    - Poster preview
-    - Back button
+
+***
+### Home
+Contains all the public pages of the website which consist of one page for every movie type, favourties list and details of each movie.<br><br>
+
+### Movie Card Item
+A card template to place title, poster of each movie along with two buttons - view movie details and add/remove from favourites list.
+
 ## Tech Stack
 
 ## Setup
