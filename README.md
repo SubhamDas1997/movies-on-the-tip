@@ -47,7 +47,7 @@ Contains all the public pages of the website which consist of a page for every m
 A card template to place title, poster of each movie and two buttons - view movie details and add/remove from favourites list.
 
 # Tech Stack
-## Frontend
+### Frontend
 1. React - v18.2.0
 1. Typescript - v4.8.4
 1. Bootstrap - v5.2.2
@@ -55,14 +55,14 @@ A card template to place title, poster of each movie and two buttons - view movi
 1. React Router - v5.3.4
 1. Axios - v1.1.3
 
-## Backend
+### Backend
 1. JSON Server - v0.17.1
 
 # Setup
-## Pre-requisites
+### Pre-requisites
 1. Download and install the latest version of [Node.js](https://nodejs.org/en/download/current) for development
 
-## Steps
+### Steps
 1. Open the project with VSCode (recommended)
 1. Open terminal and change directory to `server`
 1. Run `npm run start-server` to start the JSON server service on `http://localhost:4001`
