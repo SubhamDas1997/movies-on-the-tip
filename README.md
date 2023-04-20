@@ -5,7 +5,7 @@
 
 # Features
 This frontend application is responsibile for taking care of the following user activities on the portal:
-1. View all the movie titles with thier posters under a different movie types which include -
+1. View all the movie titles with their posters under a different movie types which include -
     - Movies in theaters
     - Coming soon
     - Top rated Indian
@@ -59,3 +59,13 @@ A card template to place title, poster of each movie and two buttons - view movi
 1. JSON Server - v0.17.1
 
 # Setup
+## Pre-requisites
+1. Download and install the latest version of [Node.js](https://nodejs.org/en/download/current) for development
+
+## Steps
+1. Open the project with VSCode (recommended)
+1. Open terminal and change directory to `server`
+1. Run `npm run start-server` to start the JSON server service on `http://localhost:4001`
+1. Open another instance of the terminal and change directory to `client`
+1. Run `npm run start` to start the react application
+1. Hit `http://localhost:3000` to access the frontend application
