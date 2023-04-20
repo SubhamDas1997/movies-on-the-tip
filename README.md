@@ -55,7 +55,7 @@ A card template to place title, poster of each movie and two buttons - view movi
 1. React Router - v5.3.4
 1. Axios - v1.1.3
 
-##Backend:
+## Backend:
 1. JSON Server - v0.17.1
 
 # Setup
