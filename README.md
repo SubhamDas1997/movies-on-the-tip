@@ -20,7 +20,6 @@ This frontend application is responsibile for taking care of the following user 
 <br><br>
 1. Favourite any movie by clicking the 'favourite' button
     - Button is diabled if the movie is already present in favourites list
-<br><br>
 1. Remove a favourite movie from the favourites list
 1. All pages are responsive to different screen sizes
 
