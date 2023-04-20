@@ -1,7 +1,7 @@
 <h1 align="center">Movies On The Tip 🎞️</h1>
 
 ### 🌐 [Site]
-### 🔴 [Demo](https://www.youtube.com/watch?v=TkSwuNl_HEA&ab_channel=SubhamDas)
+### 🔴 [Project Demo](https://www.youtube.com/watch?v=TkSwuNl_HEA&ab_channel=SubhamDas)
 
 # Features
 This frontend application is responsibile for taking care of the following user activities on the portal:
