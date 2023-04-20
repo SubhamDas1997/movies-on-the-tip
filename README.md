@@ -24,8 +24,25 @@ This frontend application is responsibile for taking care of the following user 
 1. Remove a favourite movie from the favourites list
 1. All pages are responsive to different screen sizes
 ## Modules
-
-
+### Table of Contents
+1. Home
+    - Landing Page
+    - Movies in theatre
+    - Coming soon
+    - Top rated Indian
+    - Top rated movies
+    - Favourties
+<br><br>
+1. Movie Card Item
+    - Poster
+    - Movie Title
+    - Info button
+    - Favourtie button
+<br><br>
+3. Movie Details
+    - Details
+    - Poster preview
+    - Back button
 ## Tech Stack
 
 ## Setup
