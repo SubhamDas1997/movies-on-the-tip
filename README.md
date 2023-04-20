@@ -19,7 +19,7 @@ This frontend application is responsibile for taking care of the following user 
     - Expand the movie poster by clicking on the preview button in the details page
 <br><br>
 1. Favourite any movie by clicking the 'favourite' button
-    - Button is diabled if the movie is already present in favourites list
+    - Button is disabled if the movie is already present in favourites list
 <br><br>
 1. Remove a favourite movie from the favourites list
 
