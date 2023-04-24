@@ -62,7 +62,8 @@ A card template to place title, poster of each movie and two buttons - view movi
 1. Download and install the latest version of [Node.js](https://nodejs.org/en/download/current) for development
 
 ### Steps
-1. Open the project with VSCode (recommended)
+1. Clone the repo to your folder of choice
+1. Open the folder with VSCode (recommended)
 1. Open the terminal and install all dependencies using `npm install`
 1. Change directory to 'server' usign `cd server`
 1. Run `npm run start-server` to start the JSON server service on `http://localhost:4001`
