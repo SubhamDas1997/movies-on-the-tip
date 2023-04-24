@@ -63,8 +63,9 @@ A card template to place title, poster of each movie and two buttons - view movi
 
 ### Steps
 1. Open the project with VSCode (recommended)
-1. Open terminal and change directory to `server`
+1. Open the terminal and install all dependencies using `npm install`
+1. Change directory to 'server' usign `cd server`
 1. Run `npm run start-server` to start the JSON server service on `http://localhost:4001`
-1. Open another instance of the terminal and change directory to `client`
+1. Open another instance of the terminal and change directory to 'client' using `cd client`
 1. Run `npm run start` to start the react application
 1. Hit `http://localhost:3000` to access the frontend application
